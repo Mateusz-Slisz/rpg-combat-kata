@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "rpg"
+version = "0.1.0"
+description = ""
+authors = ["Mateusz Slisz <mat.slisz@yahoo.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+pytest = "^7.1.2"
+mypy = "^0.960"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+# currently disabling specific errors is not supported in per-module options
+# more info: https://github.com/python/mypy/issues/9440
+ignore_errors = true
